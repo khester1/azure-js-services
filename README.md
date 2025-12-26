@@ -14,6 +14,9 @@ Learn Azure services with JavaScript/TypeScript through practical, focused examp
 | 06 | [App Service](./examples/06-app-service/) | Deploy Express apps, scaling, deployment slots |
 | 07 | [Static Web Apps](./examples/07-static-web-apps/) | Frontend + serverless API, GitHub Actions CI/CD |
 | 08 | [Kubernetes (AKS)](./examples/08-kubernetes/) | Container orchestration, deployments, services |
+| 09 | [Cosmos DB](./examples/09-cosmos-db/) | NoSQL database, CRUD, queries, partition keys |
+| 10 | [Blob Storage](./examples/10-blob-storage/) | File storage, upload/download, SAS tokens |
+| 11 | [SignalR](./examples/11-signalr/) | Real-time messaging, WebSockets, chat apps |
 
 ## Prerequisites
 
@@ -52,7 +55,10 @@ azure-js-services/
 │   ├── 05-container-apps/     # Docker + Container Apps
 │   ├── 06-app-service/        # Express on App Service
 │   ├── 07-static-web-apps/    # Frontend + serverless API
-│   └── 08-kubernetes/         # AKS container orchestration
+│   ├── 08-kubernetes/         # AKS container orchestration
+│   ├── 09-cosmos-db/          # NoSQL database
+│   ├── 10-blob-storage/       # File storage
+│   └── 11-signalr/            # Real-time messaging
 ├── shared/                    # Shared utilities
 ├── scripts/                   # Setup/cleanup scripts
 └── package.json
