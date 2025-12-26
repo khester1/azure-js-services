@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "STORAGE_CONNECTION": "<from setup.sh output>",
+    "SERVICE_BUS_CONNECTION": "<from 02-service-bus/.env>"
+  }
+}

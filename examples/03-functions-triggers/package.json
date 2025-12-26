@@ -1,0 +1,22 @@
+{
+  "name": "03-functions-triggers",
+  "version": "1.0.0",
+  "description": "Azure Functions with Timer, Queue, and Blob triggers",
+  "type": "module",
+  "scripts": {
+    "setup": "./setup.sh",
+    "build": "tsc",
+    "start": "func start",
+    "deploy": "func azure functionapp publish"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.5.0",
+    "@azure/storage-blob": "^12.17.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "azure-functions-core-tools": "^4.0.5",
+    "typescript": "^5.3.0"
+  }
+}

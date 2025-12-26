@@ -8,6 +8,9 @@ Learn Azure services with JavaScript/TypeScript through practical, focused examp
 |---|---------|-------------------|
 | 01 | [SQL Database](./examples/01-sql-database/) | CRUD operations, connection pooling, parameterized queries |
 | 02 | [Service Bus](./examples/02-service-bus/) | Message queues, pub/sub, dead-letter handling |
+| 03 | [Functions Triggers](./examples/03-functions-triggers/) | Timer, queue, and blob triggers for event-driven apps |
+| 04 | [Authentication](./examples/04-authentication/) | Azure AD, MSAL.js, OAuth 2.0, protected APIs |
+| 05 | [Container Apps](./examples/05-container-apps/) | Docker, containerized deployment, auto-scaling |
 
 ## Prerequisites
 
@@ -19,7 +22,7 @@ Learn Azure services with JavaScript/TypeScript through practical, focused examp
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/azure-js-services.git
+git clone https://github.com/khester1/azure-js-services.git
 cd azure-js-services
 
 # Install dependencies
@@ -39,10 +42,13 @@ cd examples/01-sql-database
 ```
 azure-js-services/
 ├── examples/
-│   ├── 01-sql-database/    # Azure SQL CRUD example
-│   └── 02-service-bus/     # Message queues & topics
-├── shared/                 # Shared utilities
-├── scripts/                # Setup/cleanup scripts
+│   ├── 01-sql-database/       # Azure SQL CRUD example
+│   ├── 02-service-bus/        # Message queues & topics
+│   ├── 03-functions-triggers/ # Timer, queue, blob triggers
+│   ├── 04-authentication/     # Azure AD + MSAL
+│   └── 05-container-apps/     # Docker + Container Apps
+├── shared/                    # Shared utilities
+├── scripts/                   # Setup/cleanup scripts
 └── package.json
 ```
 
@@ -63,4 +69,4 @@ To delete all Azure resources created by the examples:
 
 ## Related
 
-- [small-ai-apps](https://github.com/YOUR_USERNAME/small-ai-apps) - Azure AI services examples
+- [small-ai-apps](https://github.com/khester1/small-ai-apps) - Azure AI services examples
