@@ -23,7 +23,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000
+Open <http://localhost:3000>
 
 ## Deploy to Azure
 
@@ -35,6 +35,7 @@ chmod +x setup.sh deploy.sh
 ```
 
 This creates:
+
 - App Service Plan (Free F1 tier)
 - Web App with Node.js 20 runtime
 - Configures app settings and logging
@@ -47,6 +48,7 @@ npm install
 ```
 
 This will:
+
 - Build TypeScript to JavaScript
 - Package the application
 - Deploy using ZIP deploy
@@ -54,7 +56,7 @@ This will:
 ## API Endpoints
 
 | Endpoint | Description |
-|----------|-------------|
+| ---------- | ------------- |
 | `GET /` | Home page with environment info |
 | `GET /api/health` | Health check for monitoring |
 | `GET /api/info` | Detailed app and runtime info |
@@ -67,7 +69,7 @@ This will:
 App Service provides these automatically:
 
 | Variable | Description |
-|----------|-------------|
+| ---------- | ------------- |
 | `PORT` | Port to listen on (set by App Service) |
 | `WEBSITE_HOSTNAME` | Full hostname of your app |
 | `WEBSITE_SITE_NAME` | Name of the web app |
@@ -77,7 +79,7 @@ App Service provides these automatically:
 
 ## Code Structure
 
-```
+```text
 ├── src/
 │   └── server.ts      # Express application
 ├── setup.sh           # Create Azure resources
@@ -89,7 +91,7 @@ App Service provides these automatically:
 ## App Service Tiers
 
 | Tier | Cost | Features |
-|------|------|----------|
+| ------ | ------ | ---------- |
 | **Free (F1)** | $0 | 60 CPU min/day, 1 GB RAM |
 | Basic (B1) | ~$13/mo | Custom domains, SSL |
 | Standard (S1) | ~$70/mo | Auto-scale, slots, backups |
@@ -150,7 +152,7 @@ az appservice plan delete \
 ## App Service vs Container Apps vs Functions
 
 | Feature | App Service | Container Apps | Functions |
-|---------|-------------|----------------|-----------|
+| --------- | ------------- | ---------------- | ----------- |
 | **Best for** | Traditional web apps | Microservices, containers | Event-driven, serverless |
 | **Scaling** | Manual or auto | Auto (including to zero) | Auto (to zero) |
 | **Cold start** | None (always running) | Possible | Possible |

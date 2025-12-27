@@ -17,7 +17,7 @@ Learn how to build real-time web applications with Azure SignalR Service.
 
 ## Project Structure
 
-```
+```text
 11-signalr/
 ├── src/
 │   ├── server.ts      # Express server + SignalR hub
@@ -45,11 +45,11 @@ npm run server
 
 ### 3. Open in Browser
 
-Open http://localhost:3000 in multiple browser tabs to see real-time messaging.
+Open <http://localhost:3000> in multiple browser tabs to see real-time messaging.
 
 ## How It Works
 
-```
+```text
 ┌─────────────┐     ┌──────────────────┐     ┌─────────────┐
 │   Browser   │────▶│  Express Server  │────▶│   Azure     │
 │   Client    │◀────│   (negotiate)    │◀────│  SignalR    │
@@ -135,7 +135,7 @@ connection.onreconnected(() => {
 ## Service Modes
 
 | Mode | Description | Use Case |
-|------|-------------|----------|
+| ------ | ------------- | ---------- |
 | **Default** | Server manages connections | Traditional hub pattern |
 | Serverless | Azure Functions integration | Event-driven, no server |
 | Classic | Legacy mode | Migration from older versions |
@@ -143,7 +143,7 @@ connection.onreconnected(() => {
 ## Pricing
 
 | Tier | Connections | Messages/Day | Cost |
-|------|-------------|--------------|------|
+| ------ | ------------- | -------------- | ------ |
 | **Free** | 20 | 20,000 | $0 |
 | Standard | 1,000+ | Unlimited | ~$50/mo |
 
@@ -169,7 +169,7 @@ az signalr delete \
 ## SignalR vs Other Real-time Options
 
 | Feature | SignalR | WebSockets | Polling |
-|---------|---------|------------|---------|
+| --------- | --------- | ------------ | --------- |
 | **Fallback** | Auto (WS → SSE → LP) | None | N/A |
 | **Scaling** | Azure managed | DIY | DIY |
 | **Protocol** | Higher-level RPC | Raw messages | HTTP |

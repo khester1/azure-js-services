@@ -18,7 +18,7 @@ Learn how to use Azure Cosmos DB (NoSQL API) with JavaScript/TypeScript.
 
 ## Project Structure
 
-```
+```text
 09-cosmos-db/
 ├── src/
 │   ├── client.ts      # Cosmos client singleton
@@ -38,6 +38,7 @@ Learn how to use Azure Cosmos DB (NoSQL API) with JavaScript/TypeScript.
 ```
 
 This creates:
+
 - Cosmos DB account (Serverless tier)
 - Database and container
 - Saves credentials to `.env`
@@ -52,7 +53,7 @@ npm run demo
 ## Available Scripts
 
 | Script | Description |
-|--------|-------------|
+| -------- | ------------- |
 | `npm run demo` | Basic connection test |
 | `npm run crud` | Full CRUD operations |
 | `npm run query` | Advanced query examples |
@@ -132,6 +133,7 @@ console.log(`Operation cost: ${requestCharge} RUs`);
 ```
 
 Typical RU costs:
+
 - Read 1KB item: ~1 RU
 - Create 1KB item: ~5 RUs
 - Query (varies): 2-1000+ RUs
@@ -139,12 +141,13 @@ Typical RU costs:
 ## Pricing
 
 | Tier | Cost | Best For |
-|------|------|----------|
+| ------ | ------ | ---------- |
 | **Serverless** | Pay per RU | Development, low traffic |
 | Provisioned | $24+/month | Consistent workloads |
 | Free Tier | 1000 RU/s free | First Cosmos account |
 
 **Serverless pricing:**
+
 - $0.25 per 1 million RUs
 - First 25GB storage free
 - $0.25/GB/month after
@@ -184,7 +187,7 @@ az cosmosdb delete \
 ## Cosmos DB vs SQL Database
 
 | Feature | Cosmos DB | Azure SQL |
-|---------|-----------|-----------|
+| --------- | ----------- | ----------- |
 | **Type** | NoSQL (document) | Relational |
 | **Schema** | Flexible | Fixed |
 | **Scaling** | Horizontal (partitions) | Vertical + read replicas |

@@ -9,7 +9,7 @@
  * - Container-friendly logging
  */
 
-import express, { Request, Response } from 'express';
+import express, { NextFunction, Request, Response } from 'express';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -20,7 +20,7 @@ let requestCount = 0;
 const startTime = Date.now();
 
 // Middleware to track requests
-app.use((req, res, next) => {
+app.use((req: Request, res: Response, next: NextFunction) => {
   if (isShuttingDown) {
     res.status(503).json({ error: 'Server is shutting down' });
     return;

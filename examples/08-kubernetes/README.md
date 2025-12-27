@@ -22,7 +22,7 @@ Learn how to deploy containerized Node.js applications to Azure Kubernetes Servi
 
 ## Project Structure
 
-```
+```text
 08-kubernetes/
 ├── src/
 │   └── server.ts           # Express app with health endpoints
@@ -61,6 +61,7 @@ npm run docker:run
 ```
 
 This creates:
+
 - Azure Container Registry (ACR)
 - AKS cluster (1 node, Standard_B2s)
 - Configures kubectl credentials
@@ -72,6 +73,7 @@ This creates:
 ```
 
 This:
+
 1. Builds Docker image
 2. Pushes to ACR
 3. Deploys to AKS
@@ -92,7 +94,7 @@ curl http://<EXTERNAL-IP>/health
 ## API Endpoints
 
 | Endpoint | Description |
-|----------|-------------|
+| ---------- | ------------- |
 | `/` | Hello message with pod info |
 | `/api/info` | Kubernetes environment details |
 | `/health` | Liveness probe endpoint |
@@ -137,7 +139,7 @@ readinessProbe:          # Remove from LB if not ready
 ### Service Types
 
 | Type | Description |
-|------|-------------|
+| ------ | ------------- |
 | `ClusterIP` | Internal only (default) |
 | `LoadBalancer` | External Azure LB |
 | `NodePort` | Expose on node ports |
@@ -185,7 +187,7 @@ kubectl autoscale deployment aks-demo-app \
 ## Pricing
 
 | Resource | Approx. Cost |
-|----------|-------------|
+| ---------- | ------------- |
 | AKS Control Plane | Free |
 | Standard_B2s node | ~$30/month |
 | Load Balancer | ~$18/month |
@@ -213,7 +215,7 @@ az acr delete \
 ## AKS vs Other Options
 
 | Feature | AKS | Container Apps | App Service |
-|---------|-----|----------------|-------------|
+| --------- | ----- | ---------------- | ------------- |
 | **Best for** | Complex microservices | Simple containers | Traditional apps |
 | **Complexity** | High | Low | Low |
 | **Control** | Full K8s | Limited | Limited |

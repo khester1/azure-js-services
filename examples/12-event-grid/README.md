@@ -18,7 +18,7 @@ Learn how to build event-driven architectures with Azure Event Grid.
 
 ## Project Structure
 
-```
+```text
 12-event-grid/
 ├── src/
 │   ├── client.ts           # Event Grid publisher client
@@ -66,7 +66,7 @@ az eventgrid event-subscription create \
 ### Event Grid vs Service Bus
 
 | Feature | Event Grid | Service Bus |
-|---------|------------|-------------|
+| --------- | ------------ | ------------- |
 | **Pattern** | Reactive (push) | Messaging (pull) |
 | **Delivery** | At-least-once | At-least-once or exactly-once |
 | **Retention** | 24 hours retry | Days/weeks |
@@ -149,7 +149,7 @@ az eventgrid event-subscription create \
 
 ### Fan-out (One-to-Many)
 
-```
+```text
 ┌─────────┐     ┌────────────┐     ┌──────────────┐
 │ Service │────▶│ Event Grid │────▶│ Handler A    │
 └─────────┘     └────────────┘     ├──────────────┤
@@ -161,7 +161,7 @@ az eventgrid event-subscription create \
 
 ### Event-Driven Microservices
 
-```
+```text
 Orders ─────▶ Order.Created ─────▶ Inventory Service
                     │
                     ├─────────────▶ Notification Service
@@ -172,7 +172,7 @@ Orders ─────▶ Order.Created ─────▶ Inventory Service
 ## Pricing
 
 | Tier | Operations | Cost |
-|------|------------|------|
+| ------ | ------------ | ------ |
 | **Free** | First 100K/month | $0 |
 | Standard | Per million | $0.60 |
 
@@ -183,7 +183,7 @@ Orders ─────▶ Order.Created ─────▶ Inventory Service
 Event Grid integrates with Azure services:
 
 | Source | Events |
-|--------|--------|
+| -------- | -------- |
 | Blob Storage | Blob created, deleted |
 | Resource Groups | Resource changes |
 | Container Registry | Image pushed |
@@ -201,7 +201,7 @@ az eventgrid topic delete \
 ## Event Grid vs Other Messaging
 
 | Need | Use |
-|------|-----|
+| ------ | ----- |
 | Reactive events, notifications | **Event Grid** |
 | Reliable message queues | Service Bus |
 | High-throughput streaming | Event Hubs |

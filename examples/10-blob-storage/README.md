@@ -18,7 +18,7 @@ Learn how to use Azure Blob Storage for file storage with JavaScript/TypeScript.
 
 ## Project Structure
 
-```
+```text
 10-blob-storage/
 ├── src/
 │   ├── client.ts      # Storage client setup
@@ -39,6 +39,7 @@ Learn how to use Azure Blob Storage for file storage with JavaScript/TypeScript.
 ```
 
 Creates:
+
 - Storage account (Standard LRS)
 - Blob container
 
@@ -52,7 +53,7 @@ npm run demo
 ## Available Scripts
 
 | Script | Description |
-|--------|-------------|
+| -------- | ------------- |
 | `npm run demo` | Basic upload/download test |
 | `npm run upload` | Various upload methods |
 | `npm run download` | Download and SAS examples |
@@ -62,7 +63,7 @@ npm run demo
 
 ### Storage Hierarchy
 
-```
+```text
 Storage Account
 └── Container (like a folder)
     ├── blob1.txt
@@ -166,7 +167,7 @@ const sasUrl = `${blob.url}?${sasToken}`;
 ## Storage Tiers
 
 | Tier | Access | Cost | Use Case |
-|------|--------|------|----------|
+| ------ | -------- | ------ | ---------- |
 | **Hot** | Frequent | $0.0184/GB | Active data |
 | Cool | Infrequent | $0.01/GB | 30+ day storage |
 | Cold | Rare | $0.0036/GB | 90+ day storage |
@@ -175,7 +176,7 @@ const sasUrl = `${blob.url}?${sasToken}`;
 ## Pricing
 
 | Item | Cost |
-|------|------|
+| ------ | ------ |
 | Storage (Hot) | $0.0184/GB/month |
 | Read ops | $0.0043/10,000 |
 | Write ops | $0.054/10,000 |
@@ -203,7 +204,7 @@ az storage account delete \
 ## Blob Storage vs Other Options
 
 | Feature | Blob Storage | Azure Files | Data Lake |
-|---------|-------------|-------------|-----------|
+| --------- | ------------- | ------------- | ----------- |
 | **Type** | Object storage | SMB file share | Big data analytics |
 | **Access** | REST API, SDK | SMB protocol | REST + analytics |
 | **Best for** | Images, backups, static files | Legacy apps, file shares | Data lake, analytics |

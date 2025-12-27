@@ -26,6 +26,7 @@ chmod +x setup.sh
 ```
 
 This creates:
+
 - Storage Account for blob triggers
 - Blob container called "uploads"
 
@@ -36,6 +37,7 @@ cp local.settings.example.json local.settings.json
 ```
 
 Update with values from setup output:
+
 - `STORAGE_CONNECTION` - From setup.sh
 - `SERVICE_BUS_CONNECTION` - From 02-service-bus/.env
 
@@ -70,8 +72,9 @@ app.timer('timerTrigger', {
 ```
 
 **Common CRON expressions:**
+
 | Expression | Description |
-|------------|-------------|
+| ---------- | ------------- |
 | `0 * * * * *` | Every minute |
 | `0 */5 * * * *` | Every 5 minutes |
 | `0 0 * * * *` | Every hour |
@@ -94,6 +97,7 @@ app.serviceBusQueue('queueTrigger', {
 ```
 
 **Test it:**
+
 ```bash
 # In another terminal, send messages
 cd ../02-service-bus
@@ -118,6 +122,7 @@ app.storageBlob('blobTrigger', {
 ```
 
 **Test it:**
+
 ```bash
 # Upload a test file
 az storage blob upload \
@@ -131,7 +136,7 @@ az storage blob upload \
 
 ## Code Structure
 
-```
+```text
 src/
 ├── index.ts         # Registers all triggers
 ├── timerTrigger.ts  # Scheduled execution
@@ -142,7 +147,7 @@ src/
 ## Trigger Comparison
 
 | Trigger | Use Case | Scaling |
-|---------|----------|---------|
+| -------- | -------- | -------- |
 | **Timer** | Scheduled jobs, cron tasks | Single instance |
 | **Queue** | Message processing, work queues | Based on queue depth |
 | **Blob** | File processing, ETL | Based on blob events |

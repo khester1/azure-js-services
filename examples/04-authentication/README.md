@@ -26,6 +26,7 @@ chmod +x setup.sh
 ```
 
 This creates:
+
 - Azure AD app registration
 - Client secret
 - Redirect URI configuration
@@ -38,6 +39,7 @@ cp .env.example .env
 ```
 
 Update with values from setup output:
+
 - `AZURE_TENANT_ID`
 - `AZURE_CLIENT_ID`
 - `AZURE_CLIENT_SECRET`
@@ -54,11 +56,11 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000 and click "Sign In with Microsoft".
+Open <http://localhost:3000> and click "Sign In with Microsoft".
 
 ## Authentication Flow
 
-```
+```text
 1. User clicks "Sign In"
          ↓
 2. Redirect to Azure AD login page
@@ -75,7 +77,7 @@ Open http://localhost:3000 and click "Sign In with Microsoft".
 ## API Endpoints
 
 | Endpoint | Auth | Description |
-|----------|------|-------------|
+| ---------- | ------ | ------------- |
 | `GET /` | No | Home page with login button |
 | `GET /auth/login` | No | Starts OAuth flow |
 | `GET /auth/callback` | No | OAuth callback (automatic) |
@@ -87,7 +89,7 @@ Open http://localhost:3000 and click "Sign In with Microsoft".
 
 ## Code Structure
 
-```
+```text
 src/
 ├── authConfig.ts     # MSAL configuration
 ├── authMiddleware.ts # JWT validation middleware
@@ -123,6 +125,7 @@ app.get('/api/protected', requireAuth, (req, res) => {
 ### Token Validation
 
 The middleware validates:
+
 - Token signature (using Azure AD public keys)
 - Token audience (must match your client ID)
 - Token issuer (must be your Azure AD tenant)

@@ -29,6 +29,7 @@ chmod +x setup.sh
 ```
 
 The script will:
+
 - Create an Azure SQL Server
 - Create a database (Basic tier, ~$5/month)
 - Configure firewall rules
@@ -56,6 +57,7 @@ npm run demo
 ```
 
 This will:
+
 1. Initialize the database schema
 2. Create products (single and batch)
 3. Query products (all, by ID, by category)
@@ -64,7 +66,7 @@ This will:
 
 ## Code Structure
 
-```
+```text
 src/
 ├── db.ts       # Connection pool and query helpers
 ├── crud.ts     # CRUD operations for Products table

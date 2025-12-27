@@ -30,6 +30,7 @@ chmod +x setup.sh
 ```
 
 The script will:
+
 - Create a Service Bus namespace (Basic tier, ~$0.05/million ops)
 - Create a queue
 - Output the connection string
@@ -58,6 +59,7 @@ npm run sender
 ```
 
 This sends:
+
 - 1 single message
 - 3 batch messages
 - 1 scheduled message (arrives in 30 seconds)
@@ -69,6 +71,7 @@ npm run receiver
 ```
 
 This will:
+
 - Peek at messages in queue
 - Receive and process messages
 - Check the dead-letter queue
@@ -81,7 +84,7 @@ npm run demo
 
 ## Code Structure
 
-```
+```text
 src/
 ├── sender.ts     # Send messages to queue
 ├── receiver.ts   # Receive and process messages
@@ -92,7 +95,7 @@ src/
 
 ### Message Lifecycle
 
-```
+```text
 Sender → Queue → Receiver locks message
                     ↓
               complete() → Message removed ✅
@@ -139,6 +142,7 @@ for (const msg of messages) {
 ### Dead-Letter Queue
 
 Messages go to DLQ when:
+
 - Max delivery count exceeded
 - Explicitly dead-lettered
 - Message expired
@@ -165,7 +169,7 @@ az servicebus namespace delete \
 ## Cost
 
 | Tier | Cost | Features |
-|------|------|----------|
+| ------ | ------ | ---------- |
 | Basic | ~$0.05/million ops | Queues only |
 | Standard | ~$10/month | + Topics, subscriptions, sessions |
 | Premium | ~$668/month | + Dedicated resources, VNet |

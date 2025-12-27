@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(find:*)",
+      "Bash(while read dir)",
+      "Bash(do if [ -d \"$dir/node_modules\" ])",
+      "Bash(then echo \"✓ $dir\" else echo \"✗ $dir\" fi done)"
+    ]
+  }
+}

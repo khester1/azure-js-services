@@ -46,6 +46,7 @@ chmod +x setup.sh
 ```
 
 This will:
+
 1. Create Azure Container Registry
 2. Build and push Docker image
 3. Create Container Apps Environment
@@ -55,7 +56,7 @@ This will:
 ## API Endpoints
 
 | Endpoint | Description |
-|----------|-------------|
+| ---------- | ------------- |
 | `GET /` | Welcome message with container info |
 | `GET /health` | Liveness probe (is the app running?) |
 | `GET /ready` | Readiness probe (can it receive traffic?) |
@@ -65,10 +66,10 @@ This will:
 
 ## Code Structure
 
-```
+```text
 ├── Dockerfile         # Multi-stage build
 ├── src/
-│   └── server.ts     # Express server with health checks
+│   └── server.ts      # Express server with health checks
 ├── package.json
 └── tsconfig.json
 ```
@@ -124,6 +125,7 @@ CMD ["node", "dist/server.js"]
 ## Scaling
 
 Container Apps automatically scales based on:
+
 - HTTP traffic
 - CPU/memory usage
 - Custom rules (KEDA scalers)
@@ -161,7 +163,7 @@ az containerapp logs show \
 Container Apps has a generous free tier:
 
 | Resource | Free per Month |
-|----------|----------------|
+| ---------- | ---------------- |
 | vCPU | 180,000 seconds |
 | Memory | 360,000 GiB-seconds |
 | Requests | 2 million |
